@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */; };
+		87E37FBC2B9F36F100A4F809 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FBB2B9F36F100A4F809 /* ContentView.swift */; };
+		87E37FBE2B9F36F200A4F809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FBD2B9F36F200A4F809 /* Assets.xcassets */; };
+		87E37FC12B9F36F200A4F809 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FC02B9F36F200A4F809 /* Preview Assets.xcassets */; };
+		87E37FC32B9F36F200A4F809 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FC22B9F36F200A4F809 /* Persistence.swift */; };
+		87E37FC62B9F36F200A4F809 /* MedicineNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FC42B9F36F200A4F809 /* MedicineNote.xcdatamodeld */; };
+		87E37FD02B9F36F200A4F809 /* MedicineNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FCF2B9F36F200A4F809 /* MedicineNoteTests.swift */; };
+		87E37FDA2B9F36F200A4F809 /* MedicineNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FD92B9F36F200A4F809 /* MedicineNoteUITests.swift */; };
+		87E37FDC2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FDB2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		87E37FCC2B9F36F200A4F809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87E37FAE2B9F36F100A4F809 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87E37FB52B9F36F100A4F809;
+			remoteInfo = MedicineNote;
+		};
+		87E37FD62B9F36F200A4F809 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 87E37FAE2B9F36F100A4F809 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 87E37FB52B9F36F100A4F809;
+			remoteInfo = MedicineNote;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87E37FB62B9F36F100A4F809 /* MedicineNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteApp.swift; sourceTree = "<group>"; };
+		87E37FBB2B9F36F100A4F809 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		87E37FBD2B9F36F200A4F809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		87E37FC02B9F36F200A4F809 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		87E37FC22B9F36F200A4F809 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		87E37FC52B9F36F200A4F809 /* MedicineNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedicineNote.xcdatamodel; sourceTree = "<group>"; };
+		87E37FCB2B9F36F200A4F809 /* MedicineNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E37FCF2B9F36F200A4F809 /* MedicineNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteTests.swift; sourceTree = "<group>"; };
+		87E37FD52B9F36F200A4F809 /* MedicineNoteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineNoteUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		87E37FD92B9F36F200A4F809 /* MedicineNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteUITests.swift; sourceTree = "<group>"; };
+		87E37FDB2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		87E37FB32B9F36F100A4F809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E37FC82B9F36F200A4F809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E37FD22B9F36F200A4F809 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		87E37FAD2B9F36F100A4F809 = {
+			isa = PBXGroup;
+			children = (
+				87E37FB82B9F36F100A4F809 /* MedicineNote */,
+				87E37FCE2B9F36F200A4F809 /* MedicineNoteTests */,
+				87E37FD82B9F36F200A4F809 /* MedicineNoteUITests */,
+				87E37FB72B9F36F100A4F809 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		87E37FB72B9F36F100A4F809 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				87E37FB62B9F36F100A4F809 /* MedicineNote.app */,
+				87E37FCB2B9F36F200A4F809 /* MedicineNoteTests.xctest */,
+				87E37FD52B9F36F200A4F809 /* MedicineNoteUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		87E37FB82B9F36F100A4F809 /* MedicineNote */ = {
+			isa = PBXGroup;
+			children = (
+				87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */,
+				87E37FBB2B9F36F100A4F809 /* ContentView.swift */,
+				87E37FBD2B9F36F200A4F809 /* Assets.xcassets */,
+				87E37FC22B9F36F200A4F809 /* Persistence.swift */,
+				87E37FC42B9F36F200A4F809 /* MedicineNote.xcdatamodeld */,
+				87E37FBF2B9F36F200A4F809 /* Preview Content */,
+			);
+			path = MedicineNote;
+			sourceTree = "<group>";
+		};
+		87E37FBF2B9F36F200A4F809 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				87E37FC02B9F36F200A4F809 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		87E37FCE2B9F36F200A4F809 /* MedicineNoteTests */ = {
+			isa = PBXGroup;
+			children = (
+				87E37FCF2B9F36F200A4F809 /* MedicineNoteTests.swift */,
+			);
+			path = MedicineNoteTests;
+			sourceTree = "<group>";
+		};
+		87E37FD82B9F36F200A4F809 /* MedicineNoteUITests */ = {
+			isa = PBXGroup;
+			children = (
+				87E37FD92B9F36F200A4F809 /* MedicineNoteUITests.swift */,
+				87E37FDB2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift */,
+			);
+			path = MedicineNoteUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		87E37FB52B9F36F100A4F809 /* MedicineNote */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E37FDF2B9F36F200A4F809 /* Build configuration list for PBXNativeTarget "MedicineNote" */;
+			buildPhases = (
+				87E37FB22B9F36F100A4F809 /* Sources */,
+				87E37FB32B9F36F100A4F809 /* Frameworks */,
+				87E37FB42B9F36F100A4F809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MedicineNote;
+			productName = MedicineNote;
+			productReference = 87E37FB62B9F36F100A4F809 /* MedicineNote.app */;
+			productType = "com.apple.product-type.application";
+		};
+		87E37FCA2B9F36F200A4F809 /* MedicineNoteTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E37FE22B9F36F200A4F809 /* Build configuration list for PBXNativeTarget "MedicineNoteTests" */;
+			buildPhases = (
+				87E37FC72B9F36F200A4F809 /* Sources */,
+				87E37FC82B9F36F200A4F809 /* Frameworks */,
+				87E37FC92B9F36F200A4F809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87E37FCD2B9F36F200A4F809 /* PBXTargetDependency */,
+			);
+			name = MedicineNoteTests;
+			productName = MedicineNoteTests;
+			productReference = 87E37FCB2B9F36F200A4F809 /* MedicineNoteTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		87E37FD42B9F36F200A4F809 /* MedicineNoteUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 87E37FE52B9F36F200A4F809 /* Build configuration list for PBXNativeTarget "MedicineNoteUITests" */;
+			buildPhases = (
+				87E37FD12B9F36F200A4F809 /* Sources */,
+				87E37FD22B9F36F200A4F809 /* Frameworks */,
+				87E37FD32B9F36F200A4F809 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				87E37FD72B9F36F200A4F809 /* PBXTargetDependency */,
+			);
+			name = MedicineNoteUITests;
+			productName = MedicineNoteUITests;
+			productReference = 87E37FD52B9F36F200A4F809 /* MedicineNoteUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		87E37FAE2B9F36F100A4F809 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					87E37FB52B9F36F100A4F809 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					87E37FCA2B9F36F200A4F809 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 87E37FB52B9F36F100A4F809;
+					};
+					87E37FD42B9F36F200A4F809 = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 87E37FB52B9F36F100A4F809;
+					};
+				};
+			};
+			buildConfigurationList = 87E37FB12B9F36F100A4F809 /* Build configuration list for PBXProject "MedicineNote" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 87E37FAD2B9F36F100A4F809;
+			productRefGroup = 87E37FB72B9F36F100A4F809 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				87E37FB52B9F36F100A4F809 /* MedicineNote */,
+				87E37FCA2B9F36F200A4F809 /* MedicineNoteTests */,
+				87E37FD42B9F36F200A4F809 /* MedicineNoteUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		87E37FB42B9F36F100A4F809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E37FC12B9F36F200A4F809 /* Preview Assets.xcassets in Resources */,
+				87E37FBE2B9F36F200A4F809 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E37FC92B9F36F200A4F809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E37FD32B9F36F200A4F809 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		87E37FB22B9F36F100A4F809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E37FC32B9F36F200A4F809 /* Persistence.swift in Sources */,
+				87E37FC62B9F36F200A4F809 /* MedicineNote.xcdatamodeld in Sources */,
+				87E37FBC2B9F36F100A4F809 /* ContentView.swift in Sources */,
+				87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E37FC72B9F36F200A4F809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E37FD02B9F36F200A4F809 /* MedicineNoteTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87E37FD12B9F36F200A4F809 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87E37FDC2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift in Sources */,
+				87E37FDA2B9F36F200A4F809 /* MedicineNoteUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		87E37FCD2B9F36F200A4F809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87E37FB52B9F36F100A4F809 /* MedicineNote */;
+			targetProxy = 87E37FCC2B9F36F200A4F809 /* PBXContainerItemProxy */;
+		};
+		87E37FD72B9F36F200A4F809 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 87E37FB52B9F36F100A4F809 /* MedicineNote */;
+			targetProxy = 87E37FD62B9F36F200A4F809 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		87E37FDD2B9F36F200A4F809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		87E37FDE2B9F36F200A4F809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		87E37FE02B9F36F200A4F809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MedicineNote/Preview Content\"";
+				DEVELOPMENT_TEAM = CT55UK7K32;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaruumiTakemura.MedicineNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		87E37FE12B9F36F200A4F809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"MedicineNote/Preview Content\"";
+				DEVELOPMENT_TEAM = CT55UK7K32;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaruumiTakemura.MedicineNote;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		87E37FE32B9F36F200A4F809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CT55UK7K32;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaruumiTakemura.MedicineNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedicineNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MedicineNote";
+			};
+			name = Debug;
+		};
+		87E37FE42B9F36F200A4F809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CT55UK7K32;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaruumiTakemura.MedicineNoteTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MedicineNote.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MedicineNote";
+			};
+			name = Release;
+		};
+		87E37FE62B9F36F200A4F809 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CT55UK7K32;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaruumiTakemura.MedicineNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedicineNote;
+			};
+			name = Debug;
+		};
+		87E37FE72B9F36F200A4F809 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = CT55UK7K32;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.HaruumiTakemura.MedicineNoteUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MedicineNote;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		87E37FB12B9F36F100A4F809 /* Build configuration list for PBXProject "MedicineNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E37FDD2B9F36F200A4F809 /* Debug */,
+				87E37FDE2B9F36F200A4F809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E37FDF2B9F36F200A4F809 /* Build configuration list for PBXNativeTarget "MedicineNote" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E37FE02B9F36F200A4F809 /* Debug */,
+				87E37FE12B9F36F200A4F809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E37FE22B9F36F200A4F809 /* Build configuration list for PBXNativeTarget "MedicineNoteTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E37FE32B9F36F200A4F809 /* Debug */,
+				87E37FE42B9F36F200A4F809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87E37FE52B9F36F200A4F809 /* Build configuration list for PBXNativeTarget "MedicineNoteUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				87E37FE62B9F36F200A4F809 /* Debug */,
+				87E37FE72B9F36F200A4F809 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		87E37FC42B9F36F200A4F809 /* MedicineNote.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				87E37FC52B9F36F200A4F809 /* MedicineNote.xcdatamodel */,
+			);
+			currentVersion = 87E37FC52B9F36F200A4F809 /* MedicineNote.xcdatamodel */;
+			path = MedicineNote.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 87E37FAE2B9F36F100A4F809 /* Project object */;
+}
