@@ -10,7 +10,6 @@
 		87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */; };
 		87E37FBE2B9F36F200A4F809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FBD2B9F36F200A4F809 /* Assets.xcassets */; };
 		87E37FC12B9F36F200A4F809 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FC02B9F36F200A4F809 /* Preview Assets.xcassets */; };
-		87E37FC32B9F36F200A4F809 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FC22B9F36F200A4F809 /* Persistence.swift */; };
 		87E37FC62B9F36F200A4F809 /* MedicineNote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FC42B9F36F200A4F809 /* MedicineNote.xcdatamodeld */; };
 		87E37FD02B9F36F200A4F809 /* MedicineNoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FCF2B9F36F200A4F809 /* MedicineNoteTests.swift */; };
 		87E37FDA2B9F36F200A4F809 /* MedicineNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FD92B9F36F200A4F809 /* MedicineNoteUITests.swift */; };
@@ -40,7 +39,6 @@
 		87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteApp.swift; sourceTree = "<group>"; };
 		87E37FBD2B9F36F200A4F809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		87E37FC02B9F36F200A4F809 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		87E37FC22B9F36F200A4F809 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		87E37FC52B9F36F200A4F809 /* MedicineNote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MedicineNote.xcdatamodel; sourceTree = "<group>"; };
 		87E37FCB2B9F36F200A4F809 /* MedicineNoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicineNoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E37FCF2B9F36F200A4F809 /* MedicineNoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteTests.swift; sourceTree = "<group>"; };
@@ -98,10 +96,9 @@
 		87E37FB82B9F36F100A4F809 /* MedicineNote */ = {
 			isa = PBXGroup;
 			children = (
-				87E37FEA2BA0787000A4F809 /* View */,
 				87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */,
+				87E37FEA2BA0787000A4F809 /* View */,
 				87E37FBD2B9F36F200A4F809 /* Assets.xcassets */,
-				87E37FC22B9F36F200A4F809 /* Persistence.swift */,
 				87E37FC42B9F36F200A4F809 /* MedicineNote.xcdatamodeld */,
 				87E37FBF2B9F36F200A4F809 /* Preview Content */,
 			);
@@ -271,7 +268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87E37FC32B9F36F200A4F809 /* Persistence.swift in Sources */,
 				87E37FE92B9F37AD00A4F809 /* HomeView.swift in Sources */,
 				87E37FC62B9F36F200A4F809 /* MedicineNote.xcdatamodeld in Sources */,
 				87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */,
