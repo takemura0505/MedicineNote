@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State private var showingSheet = false
+    
     var body: some View {
         VStack {
             medicineScheduleView
             buttonView
         }
+        .sheet(isPresented: $showingSheet) {
+            SettingView()
+        }
+        .presentationDetents([.medium])
     }
 }
 
@@ -30,7 +37,7 @@ extension HomeView {
             }
             addButtonView
                 .onTapGesture {
-                    
+                    showingSheet = true
                 }
         }
     }
