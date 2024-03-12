@@ -10,7 +10,7 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack {
-            Spacer()
+            medicineScheduleView
             buttonView
         }
     }
@@ -78,6 +78,12 @@ extension HomeView {
                 Text("履歴")
                     .font(.caption)
             }
+        }
+    }
+    
+    var medicineScheduleView: some View {
+        ScrollView {
+            
         }
     }
     
