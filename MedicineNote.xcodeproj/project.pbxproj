@@ -16,7 +16,6 @@
 		87E37FDA2B9F36F200A4F809 /* MedicineNoteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FD92B9F36F200A4F809 /* MedicineNoteUITests.swift */; };
 		87E37FDC2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FDB2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift */; };
 		87E37FE92B9F37AD00A4F809 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FE82B9F37AD00A4F809 /* HomeView.swift */; };
-		87E37FED2BA0798000A4F809 /* Medicine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FEC2BA0798000A4F809 /* Medicine.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +48,6 @@
 		87E37FD92B9F36F200A4F809 /* MedicineNoteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteUITests.swift; sourceTree = "<group>"; };
 		87E37FDB2B9F36F200A4F809 /* MedicineNoteUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		87E37FE82B9F37AD00A4F809 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		87E37FEC2BA0798000A4F809 /* Medicine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicine.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +98,6 @@
 		87E37FB82B9F36F100A4F809 /* MedicineNote */ = {
 			isa = PBXGroup;
 			children = (
-				87E37FEB2BA0787A00A4F809 /* Model */,
 				87E37FEA2BA0787000A4F809 /* View */,
 				87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */,
 				87E37FBD2B9F36F200A4F809 /* Assets.xcassets */,
@@ -142,14 +139,6 @@
 				87E37FE82B9F37AD00A4F809 /* HomeView.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		87E37FEB2BA0787A00A4F809 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				87E37FEC2BA0798000A4F809 /* Medicine.swift */,
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +273,6 @@
 			files = (
 				87E37FC32B9F36F200A4F809 /* Persistence.swift in Sources */,
 				87E37FE92B9F37AD00A4F809 /* HomeView.swift in Sources */,
-				87E37FED2BA0798000A4F809 /* Medicine.swift in Sources */,
 				87E37FC62B9F36F200A4F809 /* MedicineNote.xcdatamodeld in Sources */,
 				87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */,
 			);
