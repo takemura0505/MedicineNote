@@ -11,7 +11,6 @@ import SwiftUI
 class MedicineViewModel: ObservableObject {
     
     private var context: NSManagedObjectContext
-    
     @Published var medicineData: [Medicine] = []
     
     init(context: NSManagedObjectContext) {
@@ -34,7 +33,6 @@ class MedicineViewModel: ObservableObject {
             print("Date conversion failed")
             return
         }
-        
         do {
             try context.save()
             fetchMedicines()
@@ -45,7 +43,6 @@ class MedicineViewModel: ObservableObject {
     
     func fetchMedicines() {
         let request: NSFetchRequest<Medicine> = Medicine.fetchRequest()
-        
         do {
             medicineData = try context.fetch(request)
         } catch {

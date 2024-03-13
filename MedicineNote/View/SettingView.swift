@@ -10,6 +10,7 @@ import CoreData
 
 struct SettingView: View {
     
+    @Binding var showingSheet: Bool
     @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var nameTextField: String = ""
     @State private var dosageTextField: String = ""
@@ -23,14 +24,15 @@ struct SettingView: View {
             addButtonView
                 .onTapGesture {
                     viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, timeString: timeTextField)
+                    showingSheet = false
                 }
         }
     }
 }
 
-#Preview {
-    SettingView()
-}
+//#Preview {
+//    SettingView()
+//}
 
 extension SettingView {
     

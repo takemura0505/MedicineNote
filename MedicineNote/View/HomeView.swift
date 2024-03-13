@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var showingSheet = false
     
     var body: some View {
@@ -17,7 +18,7 @@ struct HomeView: View {
             buttonView
         }
         .sheet(isPresented: $showingSheet) {
-            SettingView()
+            SettingView(showingSheet: $showingSheet)
         }
         .presentationDetents([.medium])
     }
@@ -89,7 +90,11 @@ extension HomeView {
     }
     
     var medicineScheduleView: some View {
-        ScrollView {
+        List(viewModel.medicineData, id: \.self) { medicine in
+            Text(medicine.name ?? "Unknown Name")
+        }
+        .onAppear {
+            viewModel.fetchMedicines()
             
         }
     }
