@@ -48,4 +48,23 @@ class MedicineViewModel: ObservableObject {
         return formatter.string(from: date)
     }
     
+    func deleteMedicine(id: String) {
+        let fetchRequest: NSFetchRequest<Medicine> = Medicine.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id as CVarArg)
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            
+            if let medicineToDelete = results.first {
+                context.delete(medicineToDelete)
+                try context.save()
+                print("Medication deleted successfully")
+            } else {
+                print("No medication found with the given ID")
+            }
+        } catch {
+            print("Error deleting medication: \(error)")
+        }
+    }
+    
 }

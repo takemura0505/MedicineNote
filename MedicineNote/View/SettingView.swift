@@ -15,7 +15,6 @@ struct SettingView: View {
     @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var nameTextField: String = ""
     @State private var dosageTextField: String = ""
-    @State private var deleteButton = false
     let medicine: Medicine?
     
     var body: some View {
@@ -29,9 +28,10 @@ struct SettingView: View {
                     viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, timeString: selectedTime)
                     showingSheet = false
                 }
-            if deleteButton {
+            if let medicine = medicine {
                 Button("Delete") {
-                    print("Delete action")
+                    viewModel.deleteMedicine(id: medicine.id!)
+                    showingSheet = false
                 }
                 .foregroundColor(.red)
             }
@@ -42,7 +42,6 @@ struct SettingView: View {
                 nameTextField = medicine.name ?? ""
                 dosageTextField = medicine.dosage ?? ""
                 selectedTime = medicine.time ?? Date()
-                deleteButton = true
             }
         }
     }
