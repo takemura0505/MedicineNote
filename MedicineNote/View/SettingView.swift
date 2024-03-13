@@ -15,10 +15,11 @@ struct SettingView: View {
     @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var nameTextField: String = ""
     @State private var dosageTextField: String = ""
+    @State private var deleteButton = false
     let medicine: Medicine?
     
     var body: some View {
-        VStack(spacing: 50) {
+        VStack(spacing: 20) {
             Spacer()
             nameView
             dosage
@@ -28,6 +29,12 @@ struct SettingView: View {
                     viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, timeString: selectedTime)
                     showingSheet = false
                 }
+            if deleteButton {
+                Button("Delete") {
+                    print("Delete action")
+                }
+                .foregroundColor(.red)
+            }
             Spacer()
         }
         .onAppear {
@@ -35,6 +42,7 @@ struct SettingView: View {
                 nameTextField = medicine.name ?? ""
                 dosageTextField = medicine.dosage ?? ""
                 selectedTime = medicine.time ?? Date()
+                deleteButton = true
             }
         }
     }
@@ -49,7 +57,6 @@ extension SettingView {
     private var nameView: some View {
         VStack {
             Text("お薬の名前")
-            Spacer()
             TextField("例 : 痛み止め", text: $nameTextField)
                 .padding()
                 .frame(width: 200, height: 45)
@@ -66,7 +73,6 @@ extension SettingView {
     private var dosage: some View {
         VStack {
             Text("お薬の量")
-            Spacer()
             TextField("例 : 2粒", text: $dosageTextField)
                 .padding()
                 .frame(width: 200, height: 45)
