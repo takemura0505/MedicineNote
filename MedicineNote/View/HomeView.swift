@@ -90,8 +90,11 @@ extension HomeView {
     }
     
     var medicineScheduleView: some View {
-        List(viewModel.medicineData, id: \.self) { medicine in
-            Text(medicine.name ?? "Unknown Name")
+        ScrollView {
+            ForEach(viewModel.medicineData, id: \.self) { medicine in
+                MedicineListView(medicine: medicine)
+                    .padding(.horizontal)
+            }
         }
         .onAppear {
             viewModel.fetchMedicines()

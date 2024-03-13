@@ -18,6 +18,7 @@
 		87E37FF02BA0811500A4F809 /* MedicineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FEF2BA0811500A4F809 /* MedicineViewModel.swift */; };
 		87E37FF22BA09CBF00A4F809 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FF12BA09CBF00A4F809 /* SettingView.swift */; };
 		87E37FF62BA1950B00A4F809 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FF52BA1950B00A4F809 /* PersistenceController.swift */; };
+		87E37FFA2BA1A10500A4F809 /* MedicineListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FF92BA1A10500A4F809 /* MedicineListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		87E37FEF2BA0811500A4F809 /* MedicineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewModel.swift; sourceTree = "<group>"; };
 		87E37FF12BA09CBF00A4F809 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		87E37FF52BA1950B00A4F809 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
+		87E37FF92BA1A10500A4F809 /* MedicineListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,7 @@
 			children = (
 				87E37FE82B9F37AD00A4F809 /* HomeView.swift */,
 				87E37FF12BA09CBF00A4F809 /* SettingView.swift */,
+				87E37FF92BA1A10500A4F809 /* MedicineListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87E37FFA2BA1A10500A4F809 /* MedicineListView.swift in Sources */,
 				87E37FF02BA0811500A4F809 /* MedicineViewModel.swift in Sources */,
 				87E37FF22BA09CBF00A4F809 /* SettingView.swift in Sources */,
 				87E37FE92B9F37AD00A4F809 /* HomeView.swift in Sources */,
