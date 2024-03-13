@@ -29,7 +29,7 @@ struct SettingView: View {
                     showingSheet = false
                 }
             if let medicine = medicine {
-                Button("Delete") {
+                Button("削除") {
                     viewModel.deleteMedicine(id: medicine.id!)
                     showingSheet = false
                 }
