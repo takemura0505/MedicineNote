@@ -18,21 +18,12 @@ class MedicineViewModel: ObservableObject {
         fetchMedicines()
     }
     
-    func addMedicine(name: String, dosage: String, timeString: String) {
+    func addMedicine(name: String, dosage: String, timeString: Date) {
         let newMedicine = Medicine(context: context)
         newMedicine.id = UUID().uuidString
         newMedicine.name = name
         newMedicine.dosage = dosage
-        
-        // StringからDateへの変換
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "HH:mm"
-        if let time = dateFormatter.date(from: timeString) {
-            newMedicine.time = time
-        } else {
-            print("Date conversion failed")
-            return
-        }
+        newMedicine.time = timeString
         do {
             try context.save()
             fetchMedicines()
@@ -50,4 +41,11 @@ class MedicineViewModel: ObservableObject {
             print(error)
         }
     }
+    
+    func formatTime(date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.timeStyle = .short
+        return formatter.string(from: date)
+    }
+    
 }

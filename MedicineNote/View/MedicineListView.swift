@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MedicineListView: View {
     
+    @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     let medicine: Medicine
     
     var body: some View {
@@ -37,7 +38,7 @@ extension MedicineListView {
                         .font(.title3)
                 }
                 Spacer()
-                Text("10:00")
+                Text(viewModel.formatTime(date: medicine.time ?? Date()))
                     .font(.title.bold())
                     .foregroundColor(Color(uiColor: .label))
             }
