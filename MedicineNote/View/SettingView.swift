@@ -42,7 +42,7 @@ extension SettingView {
         VStack {
             Text("お薬の名前")
             Spacer()
-            TextField("名前を入力", text: $nameTextField)
+            TextField("例 : 痛み止め", text: $nameTextField)
                 .padding()
                 .frame(width: 200, height: 45)
                 .background(.lightGray)
@@ -59,7 +59,7 @@ extension SettingView {
         VStack {
             Text("お薬の量")
             Spacer()
-            TextField("量を入力", text: $dosageTextField)
+            TextField("例 : 2粒", text: $dosageTextField)
                 .padding()
                 .frame(width: 200, height: 45)
                 .background(.lightGray)

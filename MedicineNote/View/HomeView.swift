@@ -14,6 +14,7 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
+            topBarView
             medicineScheduleView
             buttonView
         }
@@ -29,6 +30,16 @@ struct HomeView: View {
 }
 
 extension HomeView {
+    
+    private var topBarView: some View {
+        HStack {
+            Spacer()
+            Text("今日のお薬")
+                .font(.title3.bold())
+            Spacer()
+        }
+        .padding()
+    }
     
     private var buttonView: some View {
         ZStack {
@@ -91,6 +102,7 @@ extension HomeView {
     
     private var medicineScheduleView: some View {
         ScrollView {
+            Spacer(minLength: 5)
             ForEach(viewModel.medicineData, id: \.self) { medicine in
                 MedicineListView(medicine: medicine)
                     .padding(.horizontal)

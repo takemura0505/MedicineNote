@@ -46,7 +46,7 @@ extension MedicineListView {
         }
         .overlay(
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color(uiColor: .label), lineWidth: 5)
+                .stroke(Color(uiColor: .label), lineWidth: 1)
         )
     }
     
