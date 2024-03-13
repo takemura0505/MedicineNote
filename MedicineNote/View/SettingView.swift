@@ -36,7 +36,7 @@ struct SettingView: View {
 
 extension SettingView {
     
-    var nameView: some View {
+    private var nameView: some View {
         HStack {
             Text("お薬の名前")
             Spacer()
@@ -49,7 +49,7 @@ extension SettingView {
         .padding()
     }
     
-    var dosage: some View {
+    private var dosage: some View {
         HStack {
             Text("お薬の量")
             Spacer()
@@ -62,7 +62,7 @@ extension SettingView {
         .padding()
     }
     
-    var timeView: some View {
+    private var timeView: some View {
         HStack {
             Text("お薬を飲む時間")
             Spacer()
@@ -75,7 +75,7 @@ extension SettingView {
         .padding()
     }
     
-    var addButtonView: some View {
+    private var addButtonView: some View {
         ZStack {
             Capsule()
                 .frame(width: 250, height: 50)

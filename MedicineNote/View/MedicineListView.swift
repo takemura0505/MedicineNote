@@ -12,6 +12,18 @@ struct MedicineListView: View {
     let medicine: Medicine
     
     var body: some View {
+        listView
+    }
+    
+}
+
+#Preview {
+    MedicineListView(medicine: Medicine(context: PersistenceController.shared.container.viewContext))
+}
+
+extension MedicineListView {
+    
+    private var listView: some View {
         ZStack {
             Rectangle()
                 .frame(height: 75)
@@ -37,8 +49,4 @@ struct MedicineListView: View {
         )
     }
     
-}
-
-#Preview {
-    MedicineListView(medicine: Medicine(context: PersistenceController.shared.container.viewContext))
 }

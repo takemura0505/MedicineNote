@@ -30,7 +30,7 @@ struct HomeView: View {
 
 extension HomeView {
     
-    var buttonView: some View {
+    private var buttonView: some View {
         ZStack {
             HStack {
                 drunkButtonView
@@ -43,7 +43,7 @@ extension HomeView {
         }
     }
     
-    var addButtonView: some View {
+    private var addButtonView: some View {
         ZStack {
             Circle()
                 .frame(height: 100)
@@ -59,7 +59,7 @@ extension HomeView {
         }
     }
     
-    var drunkButtonView: some View {
+    private var drunkButtonView: some View {
         ZStack {
             Rectangle()
                 .frame(height: 80)
@@ -74,7 +74,7 @@ extension HomeView {
         }
     }
     
-    var historyButtonView: some View {
+    private var historyButtonView: some View {
         ZStack {
             Rectangle()
                 .frame(height: 80)
@@ -89,7 +89,7 @@ extension HomeView {
         }
     }
     
-    var medicineScheduleView: some View {
+    private var medicineScheduleView: some View {
         ScrollView {
             ForEach(viewModel.medicineData, id: \.self) { medicine in
                 MedicineListView(medicine: medicine)
@@ -98,7 +98,6 @@ extension HomeView {
         }
         .onAppear {
             viewModel.fetchMedicines()
-            
         }
     }
     
