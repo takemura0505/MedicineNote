@@ -11,6 +11,8 @@ struct HomeView: View {
     
     @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var showingSheet = false
+    @State private var selectedMedicine: Medicine? = nil
+    
     
     var body: some View {
         VStack {
@@ -19,7 +21,7 @@ struct HomeView: View {
             buttonView
         }
         .sheet(isPresented: $showingSheet) {
-            SettingView(showingSheet: $showingSheet)
+            SettingView(showingSheet: $showingSheet, medicine: selectedMedicine)
         }
         .presentationDetents([.medium])
     }
@@ -50,6 +52,7 @@ extension HomeView {
             }
             addButtonView
                 .onTapGesture {
+                    selectedMedicine = nil
                     showingSheet = true
                 }
         }
@@ -108,6 +111,7 @@ extension HomeView {
                 MedicineListView(medicine: medicine)
                     .padding(.horizontal)
                     .onTapGesture {
+                        selectedMedicine = medicine
                         showingSheet = true
                     }
             }

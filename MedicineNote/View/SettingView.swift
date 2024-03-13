@@ -15,6 +15,7 @@ struct SettingView: View {
     @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var nameTextField: String = ""
     @State private var dosageTextField: String = ""
+    let medicine: Medicine?
     
     var body: some View {
         VStack(spacing: 50) {
@@ -28,6 +29,13 @@ struct SettingView: View {
                     showingSheet = false
                 }
             Spacer()
+        }
+        .onAppear {
+            if let medicine = medicine {
+                nameTextField = medicine.name ?? ""
+                dosageTextField = medicine.dosage ?? ""
+                selectedTime = medicine.time ?? Date()
+            }
         }
     }
 }
