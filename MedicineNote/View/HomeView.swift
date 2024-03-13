@@ -23,6 +23,7 @@ struct HomeView: View {
         }
         .presentationDetents([.medium])
     }
+    
 }
 
 #Preview {
@@ -106,6 +107,9 @@ extension HomeView {
             ForEach(viewModel.medicineData, id: \.self) { medicine in
                 MedicineListView(medicine: medicine)
                     .padding(.horizontal)
+                    .onTapGesture {
+                        showingSheet = true
+                    }
             }
         }
         .onAppear {
