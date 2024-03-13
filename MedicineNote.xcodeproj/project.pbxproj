@@ -17,6 +17,7 @@
 		87E37FE92B9F37AD00A4F809 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FE82B9F37AD00A4F809 /* HomeView.swift */; };
 		87E37FF02BA0811500A4F809 /* MedicineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FEF2BA0811500A4F809 /* MedicineViewModel.swift */; };
 		87E37FF22BA09CBF00A4F809 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FF12BA09CBF00A4F809 /* SettingView.swift */; };
+		87E37FF62BA1950B00A4F809 /* PersistenceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FF52BA1950B00A4F809 /* PersistenceController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		87E37FE82B9F37AD00A4F809 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		87E37FEF2BA0811500A4F809 /* MedicineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineViewModel.swift; sourceTree = "<group>"; };
 		87E37FF12BA09CBF00A4F809 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		87E37FF52BA1950B00A4F809 /* PersistenceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */,
 				87E37FEE2BA080F900A4F809 /* ViewModel */,
 				87E37FEA2BA0787000A4F809 /* View */,
+				87E37FF52BA1950B00A4F809 /* PersistenceController.swift */,
 				87E37FBD2B9F36F200A4F809 /* Assets.xcassets */,
 				87E37FC42B9F36F200A4F809 /* MedicineNote.xcdatamodeld */,
 				87E37FBF2B9F36F200A4F809 /* Preview Content */,
@@ -285,6 +288,7 @@
 				87E37FF02BA0811500A4F809 /* MedicineViewModel.swift in Sources */,
 				87E37FF22BA09CBF00A4F809 /* SettingView.swift in Sources */,
 				87E37FE92B9F37AD00A4F809 /* HomeView.swift in Sources */,
+				87E37FF62BA1950B00A4F809 /* PersistenceController.swift in Sources */,
 				87E37FC62B9F36F200A4F809 /* MedicineNote.xcdatamodeld in Sources */,
 				87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */,
 			);

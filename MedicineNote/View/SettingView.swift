@@ -6,10 +6,14 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct SettingView: View {
     
+    @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var nameTextField: String = ""
+    @State private var dosageTextField: String = ""
+    @State private var timeTextField: String = ""
     
     var body: some View {
         VStack(spacing: 50) {
@@ -17,6 +21,9 @@ struct SettingView: View {
             dosage
             timeView
             addButtonView
+                .onTapGesture {
+                    viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, timeString: timeTextField)
+                }
         }
     }
 }
@@ -44,7 +51,7 @@ extension SettingView {
         HStack {
             Text("お薬の量")
             Spacer()
-            TextField("量を入力", text: $nameTextField)
+            TextField("量を入力", text: $dosageTextField)
                 .padding()
                 .frame(width: 200, height: 45)
                 .background(.lightGray)
@@ -57,7 +64,7 @@ extension SettingView {
         HStack {
             Text("お薬を飲む時間")
             Spacer()
-            TextField("お薬を飲む時間を入力", text: $nameTextField)
+            TextField("お薬を飲む時間を入力", text: $timeTextField)
                 .padding()
                 .frame(width: 200, height: 45)
                 .background(.lightGray)
