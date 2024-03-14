@@ -25,8 +25,13 @@ struct SettingView: View {
             timeView
             addButtonView
                 .onTapGesture {
-                    viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, timeString: selectedTime)
-                    showingSheet = false
+                    if let medicine = medicine {
+                        viewModel.updateMedicine(id: medicine.id ?? "", newName: nameTextField, newDosage: dosageTextField, newTimeString: selectedTime)
+                        showingSheet = false
+                    } else {
+                        viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, timeString: selectedTime)
+                        showingSheet = false
+                    }
                 }
             if let medicine = medicine {
                 Button("削除") {

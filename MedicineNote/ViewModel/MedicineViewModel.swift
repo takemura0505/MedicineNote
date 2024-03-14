@@ -67,4 +67,21 @@ class MedicineViewModel: ObservableObject {
         }
     }
     
+    func updateMedicine(id: String, newName: String, newDosage: String, newTimeString: Date) {
+        let fetchRequest: NSFetchRequest<Medicine> = Medicine.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "id == %@", id)
+        do {
+            let results = try context.fetch(fetchRequest)
+            if let medicineToUpdate = results.first {
+                medicineToUpdate.name = newName
+                medicineToUpdate.dosage = newDosage
+                medicineToUpdate.time = newTimeString
+                try context.save()
+                fetchMedicines()
+            }
+        } catch {
+            print(error)
+        }
+    }
+    
 }
