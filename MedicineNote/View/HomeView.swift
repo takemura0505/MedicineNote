@@ -108,7 +108,7 @@ extension HomeView {
         ScrollView {
             Spacer(minLength: 5)
             ForEach(viewModel.medicineData, id: \.self) { medicine in
-                MedicineListView(medicine: medicine)
+                MedicineListView(viewModel: viewModel, medicine: medicine)
                     .padding(.horizontal)
                     .onTapGesture {
                         selectedMedicine = medicine

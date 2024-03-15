@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MedicineListView: View {
     
-    @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
+    @ObservedObject var viewModel: MedicineViewModel
     let medicine: Medicine
     
     var body: some View {
@@ -18,9 +18,9 @@ struct MedicineListView: View {
     
 }
 
-#Preview {
-    MedicineListView(medicine: Medicine(context: PersistenceController.shared.container.viewContext))
-}
+//#Preview {
+//    MedicineListView(viewModel: <#MedicineViewModel#>, medicine: Medicine(context: PersistenceController.shared.container.viewContext))
+//}
 
 extension MedicineListView {
     
