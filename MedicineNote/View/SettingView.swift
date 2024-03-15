@@ -26,10 +26,10 @@ struct SettingView: View {
             addButtonView
                 .onTapGesture {
                     if let medicine = medicine {
-                        viewModel.updateMedicine(id: medicine.id ?? "", newName: nameTextField, newDosage: dosageTextField, newTimeString: selectedTime)
+                        viewModel.updateMedicine(id: medicine.id ?? "", newName: nameTextField, newDosage: dosageTextField, newTime: selectedTime)
                         showingSheet = false
                     } else {
-                        viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, timeString: selectedTime)
+                        viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, time: selectedTime)
                         showingSheet = false
                     }
                 }

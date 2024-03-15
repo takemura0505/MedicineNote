@@ -18,15 +18,17 @@ class MedicineViewModel: ObservableObject {
         fetchMedicines()
     }
     
-    func addMedicine(name: String, dosage: String, timeString: Date) {
+    func addMedicine(name: String, dosage: String, time: Date) {
         let newMedicine = Medicine(context: context)
-        newMedicine.id = UUID().uuidString
+        let id = UUID().uuidString
+        newMedicine.id = id
         newMedicine.name = name
         newMedicine.dosage = dosage
-        newMedicine.time = timeString
+        newMedicine.time = time
         do {
             try context.save()
             fetchMedicines()
+            scheduleDailyNotification(id: id, at: time, title: "お薬を飲む時間です", body: "\(name)を\(dosage)飲みましょう")
         } catch {
             print(error)
         }
@@ -59,6 +61,7 @@ class MedicineViewModel: ObservableObject {
                 context.delete(medicineToDelete)
                 try context.save()
                 fetchMedicines()
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
                 print("Medication deleted successfully")
             } else {
                 print("No medication found with the given ID")
@@ -68,7 +71,7 @@ class MedicineViewModel: ObservableObject {
         }
     }
     
-    func updateMedicine(id: String, newName: String, newDosage: String, newTimeString: Date) {
+    func updateMedicine(id: String, newName: String, newDosage: String, newTime: Date) {
         let fetchRequest: NSFetchRequest<Medicine> = Medicine.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "id == %@", id)
         do {
@@ -76,12 +79,32 @@ class MedicineViewModel: ObservableObject {
             if let medicineToUpdate = results.first {
                 medicineToUpdate.name = newName
                 medicineToUpdate.dosage = newDosage
-                medicineToUpdate.time = newTimeString
+                medicineToUpdate.time = newTime
                 try context.save()
                 fetchMedicines()
+                UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [id])
+                scheduleDailyNotification(id: id, at: newTime, title: "お薬を飲む時間です", body: "\(newName)を\(newDosage)飲みましょう")
             }
         } catch {
             print(error)
+        }
+    }
+    
+    func scheduleDailyNotification(id: String, at time: Date, title: String, body: String) {
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = UNNotificationSound.default
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: time)
+        let minute = calendar.component(.minute, from: time)
+        let triggerDate = DateComponents(hour: hour, minute: minute)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: triggerDate, repeats: true)
+        let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print("Error scheduling daily notification: \(error)")
+            }
         }
     }
     
