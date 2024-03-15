@@ -12,7 +12,7 @@ struct SettingView: View {
     
     @State private var selectedTime = Date()
     @Binding var showingSheet: Bool
-    @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
+    @ObservedObject var viewModel: MedicineViewModel
     @State private var nameTextField: String = ""
     @State private var dosageTextField: String = ""
     let medicine: Medicine?

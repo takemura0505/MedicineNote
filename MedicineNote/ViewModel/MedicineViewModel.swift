@@ -58,6 +58,7 @@ class MedicineViewModel: ObservableObject {
             if let medicineToDelete = results.first {
                 context.delete(medicineToDelete)
                 try context.save()
+                fetchMedicines()
                 print("Medication deleted successfully")
             } else {
                 print("No medication found with the given ID")
