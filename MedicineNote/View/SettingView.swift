@@ -66,6 +66,7 @@ extension SettingView {
                 .frame(width: 200, height: 45)
                 .background(.lightGray)
                 .clipShape(Capsule())
+                .foregroundColor(.black)
         }
         .padding()
         .overlay(
@@ -82,6 +83,7 @@ extension SettingView {
                 .frame(width: 200, height: 45)
                 .background(.lightGray)
                 .clipShape(Capsule())
+                .foregroundColor(.black)
         }
         .padding()
         .overlay(

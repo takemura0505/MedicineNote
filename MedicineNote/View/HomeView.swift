@@ -81,6 +81,7 @@ extension HomeView {
                 Text("追加")
                     .font(.caption)
             }
+            .foregroundColor(.black)
         }
     }
     
@@ -96,6 +97,7 @@ extension HomeView {
                 Text("飲んだ")
                     .font(.caption)
             }
+            .foregroundColor(.black)
         }
     }
     
@@ -112,6 +114,7 @@ extension HomeView {
                     Text("履歴")
                         .font(.caption)
                 }
+                .foregroundColor(.black)
             }
             .foregroundColor(Color(uiColor: .label))
         }
