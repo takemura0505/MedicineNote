@@ -10,7 +10,8 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
-    @State private var showingSheet = false
+    @State private var showingSettingSheet = false
+    @State private var showingTakenSheet = false
     @State private var selectedMedicine: Medicine? = nil
     
     
@@ -20,8 +21,11 @@ struct HomeView: View {
             medicineScheduleView
             buttonView
         }
-        .sheet(isPresented: $showingSheet) {
-            SettingView(showingSheet: $showingSheet, viewModel: viewModel, medicine: selectedMedicine)
+        .sheet(isPresented: $showingSettingSheet) {
+            SettingView(showingSettingSheet: $showingSettingSheet, viewModel: viewModel, medicine: selectedMedicine)
+        }
+        .sheet(isPresented: $showingTakenSheet) {
+            TakenView(viewModel: viewModel, showingTakenSheet: $showingTakenSheet)
         }
     }
     
@@ -36,7 +40,7 @@ extension HomeView {
     private var topBarView: some View {
         HStack {
             Spacer()
-            Text("今日のお薬")
+            Text("お薬")
                 .font(.title3.bold())
             Spacer()
         }
@@ -47,12 +51,15 @@ extension HomeView {
         ZStack {
             HStack {
                 drunkButtonView
+                    .onTapGesture {
+                        showingTakenSheet = true
+                    }
                 historyButtonView
             }
             addButtonView
                 .onTapGesture {
                     selectedMedicine = nil
-                    showingSheet = true
+                    showingSettingSheet = true
                 }
         }
     }
@@ -82,7 +89,7 @@ extension HomeView {
                 Image(systemName: "mug")
                     .font(.title)
                     .padding(5)
-                Text("もう飲んだ")
+                Text("飲んだ")
                     .font(.caption)
             }
         }
@@ -111,7 +118,7 @@ extension HomeView {
                     .padding(.horizontal)
                     .onTapGesture {
                         selectedMedicine = medicine
-                        showingSheet = true
+                        showingSettingSheet = true
                     }
             }
         }

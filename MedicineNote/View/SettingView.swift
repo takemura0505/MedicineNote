@@ -11,7 +11,7 @@ import CoreData
 struct SettingView: View {
     
     @State private var selectedTime = Date()
-    @Binding var showingSheet: Bool
+    @Binding var showingSettingSheet: Bool
     @ObservedObject var viewModel: MedicineViewModel
     @State private var nameTextField: String = ""
     @State private var dosageTextField: String = ""
@@ -27,16 +27,16 @@ struct SettingView: View {
                 .onTapGesture {
                     if let medicine = medicine {
                         viewModel.updateMedicine(id: medicine.id ?? "", newName: nameTextField, newDosage: dosageTextField, newTime: selectedTime)
-                        showingSheet = false
+                        showingSettingSheet = false
                     } else {
                         viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, time: selectedTime)
-                        showingSheet = false
+                        showingSettingSheet = false
                     }
                 }
             if let medicine = medicine {
                 Button("削除") {
                     viewModel.deleteMedicine(id: medicine.id!)
-                    showingSheet = false
+                    showingSettingSheet = false
                 }
                 .foregroundColor(.red)
             }
