@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87552FE52BA567D6009A7F1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87552FE42BA567D6009A7F1C /* AppDelegate.swift */; };
 		87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */; };
 		87E37FBE2B9F36F200A4F809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FBD2B9F36F200A4F809 /* Assets.xcassets */; };
 		87E37FC12B9F36F200A4F809 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FC02B9F36F200A4F809 /* Preview Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		87552FE42BA567D6009A7F1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		87E37FB62B9F36F100A4F809 /* MedicineNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteApp.swift; sourceTree = "<group>"; };
 		87E37FBD2B9F36F200A4F809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */,
+				87552FE42BA567D6009A7F1C /* AppDelegate.swift */,
 				87E37FEE2BA080F900A4F809 /* ViewModel */,
 				87E37FEA2BA0787000A4F809 /* View */,
 				87E37FF52BA1950B00A4F809 /* PersistenceController.swift */,
@@ -288,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87552FE52BA567D6009A7F1C /* AppDelegate.swift in Sources */,
 				87E37FFA2BA1A10500A4F809 /* MedicineListView.swift in Sources */,
 				87E37FF02BA0811500A4F809 /* MedicineViewModel.swift in Sources */,
 				87E37FF22BA09CBF00A4F809 /* SettingView.swift in Sources */,

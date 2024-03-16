@@ -10,6 +10,8 @@ import SwiftUI
 @main
 struct MedicineNoteApp: App {
     
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     init() {
         requestNotificationPermission()
     }
