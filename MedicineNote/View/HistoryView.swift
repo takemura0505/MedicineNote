@@ -13,6 +13,17 @@ struct HistoryView: View {
     
     var body: some View {
         VStack {
+            HStack {
+                Spacer()
+                Button(action: {
+                    historyViewModel.deleteAllMedicationHistory()
+                }, label: {
+                    Text("全ての履歴を削除")
+                        .background(.clear)
+                        .foregroundColor(.red)
+                        .padding()
+                })
+            }
             medicineHistoryView
         }
         .navigationBarTitle("履歴", displayMode: .inline)

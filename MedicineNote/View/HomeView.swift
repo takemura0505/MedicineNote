@@ -30,6 +30,7 @@ struct HomeView: View {
                 TakenView(viewModel: viewModel, historyViewModel: historyViewModel, showingTakenSheet: $showingTakenSheet)
             }
         }
+        .accentColor(Color(uiColor: .label))
     }
     
 }

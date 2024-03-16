@@ -40,9 +40,14 @@ extension MedicineListView {
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 Spacer()
-                Text(viewModel.formatTime(date: medicine.time ?? Date()))
-                    .font(.title.bold())
-                    .foregroundColor(Color(uiColor: .label))
+                VStack {
+                    Text(viewModel.formatTime(date: medicine.time ?? Date()))
+                        .font(.title.bold())
+                        .foregroundColor(Color(uiColor: .label))
+                    Text("に毎日通知します")
+                        .font(.caption)
+                        .foregroundColor(Color(uiColor: .label))
+                }
             }
             .padding()
         }

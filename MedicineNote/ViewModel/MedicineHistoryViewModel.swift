@@ -48,4 +48,24 @@ class MedicationHistoryViewModel: ObservableObject {
         }
     }
     
+    func deleteAllMedicationHistory() {
+        // 特定のエンティティタイプ（MedicationHistory）に関連する全てのオブジェクトをフェッチするリクエストを作成
+        let fetchRequest: NSFetchRequest<NSFetchRequestResult> = MedicineHistory.fetchRequest()
+        
+        // フェッチリクエストを使用して削除リクエストを作成
+        let deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+        
+        do {
+            // コンテキストを通じて削除を実行
+            try context.execute(deleteRequest)
+            // コンテキストの変更を保存
+            try context.save()
+            fetchMedicineHistory()
+            print("Successfully deleted all medication history.")
+        } catch {
+            // エラーハンドリング
+            print("Failed to delete all medication history: \(error)")
+        }
+    }
+    
 }
