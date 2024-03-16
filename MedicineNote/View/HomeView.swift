@@ -23,7 +23,6 @@ struct HomeView: View {
         .sheet(isPresented: $showingSheet) {
             SettingView(showingSheet: $showingSheet, viewModel: viewModel, medicine: selectedMedicine)
         }
-        .presentationDetents([.medium])
     }
     
 }
