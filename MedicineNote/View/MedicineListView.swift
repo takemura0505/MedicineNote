@@ -34,8 +34,10 @@ extension MedicineListView {
                 VStack {
                     Text(medicine.name ?? "お薬")
                         .font(.title3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                     Text(medicine.dosage ?? "適量")
                         .font(.title3)
+                        .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 Spacer()
                 Text(viewModel.formatTime(date: medicine.time ?? Date()))
