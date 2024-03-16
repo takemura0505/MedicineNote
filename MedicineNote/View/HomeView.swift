@@ -10,22 +10,25 @@ import SwiftUI
 struct HomeView: View {
     
     @StateObject var viewModel = MedicineViewModel(context: PersistenceController.shared.container.viewContext)
+    @StateObject var historyViewModel = MedicationHistoryViewModel(context: PersistenceController.shared.container.viewContext)
     @State private var showingSettingSheet = false
     @State private var showingTakenSheet = false
     @State private var selectedMedicine: Medicine? = nil
     
     
     var body: some View {
-        VStack {
-            topBarView
-            medicineScheduleView
-            buttonView
-        }
-        .sheet(isPresented: $showingSettingSheet) {
-            SettingView(showingSettingSheet: $showingSettingSheet, viewModel: viewModel, medicine: selectedMedicine)
-        }
-        .sheet(isPresented: $showingTakenSheet) {
-            TakenView(viewModel: viewModel, showingTakenSheet: $showingTakenSheet)
+        NavigationView {
+            VStack {
+                topBarView
+                medicineScheduleView
+                buttonView
+            }
+            .sheet(isPresented: $showingSettingSheet) {
+                SettingView(showingSettingSheet: $showingSettingSheet, viewModel: viewModel, medicine: selectedMedicine)
+            }
+            .sheet(isPresented: $showingTakenSheet) {
+                TakenView(viewModel: viewModel, historyViewModel: historyViewModel, showingTakenSheet: $showingTakenSheet)
+            }
         }
     }
     
@@ -96,17 +99,20 @@ extension HomeView {
     }
     
     private var historyButtonView: some View {
-        ZStack {
-            Rectangle()
-                .frame(height: 80)
-                .foregroundColor(.lightPink)
-            VStack {
-                Image(systemName: "clock")
-                    .font(.title)
-                    .padding(5)
-                Text("履歴")
-                    .font(.caption)
+        NavigationLink(destination: HistoryView(historyViewModel: historyViewModel)) {
+            ZStack {
+                Rectangle()
+                    .frame(height: 80)
+                    .foregroundColor(.lightPink)
+                VStack {
+                    Image(systemName: "clock")
+                        .font(.title)
+                        .padding(5)
+                    Text("履歴")
+                        .font(.caption)
+                }
             }
+            .foregroundColor(Color(uiColor: .label))
         }
     }
     

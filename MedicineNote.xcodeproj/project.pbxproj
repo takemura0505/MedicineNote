@@ -11,6 +11,8 @@
 		87552FE72BA5826C009A7F1C /* TakenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87552FE62BA5826C009A7F1C /* TakenView.swift */; };
 		87552FE92BA588DE009A7F1C /* SelectMedicineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87552FE82BA588DE009A7F1C /* SelectMedicineView.swift */; };
 		87552FEB2BA5BA82009A7F1C /* MedicineHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87552FEA2BA5BA82009A7F1C /* MedicineHistoryViewModel.swift */; };
+		87552FED2BA5C454009A7F1C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87552FEC2BA5C454009A7F1C /* HistoryView.swift */; };
+		87552FF02BA5CC71009A7F1C /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87552FEF2BA5CC71009A7F1C /* Date.swift */; };
 		87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */; };
 		87E37FBE2B9F36F200A4F809 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FBD2B9F36F200A4F809 /* Assets.xcassets */; };
 		87E37FC12B9F36F200A4F809 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87E37FC02B9F36F200A4F809 /* Preview Assets.xcassets */; };
@@ -47,6 +49,8 @@
 		87552FE62BA5826C009A7F1C /* TakenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakenView.swift; sourceTree = "<group>"; };
 		87552FE82BA588DE009A7F1C /* SelectMedicineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectMedicineView.swift; sourceTree = "<group>"; };
 		87552FEA2BA5BA82009A7F1C /* MedicineHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineHistoryViewModel.swift; sourceTree = "<group>"; };
+		87552FEC2BA5C454009A7F1C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		87552FEF2BA5CC71009A7F1C /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		87E37FB62B9F36F100A4F809 /* MedicineNote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MedicineNote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicineNoteApp.swift; sourceTree = "<group>"; };
 		87E37FBD2B9F36F200A4F809 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +93,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		87552FEE2BA5CC63009A7F1C /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				87552FEF2BA5CC71009A7F1C /* Date.swift */,
+			);
+			path = Extention;
+			sourceTree = "<group>";
+		};
 		87E37FAD2B9F36F100A4F809 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +126,7 @@
 			children = (
 				87E37FB92B9F36F100A4F809 /* MedicineNoteApp.swift */,
 				87552FE42BA567D6009A7F1C /* AppDelegate.swift */,
+				87552FEE2BA5CC63009A7F1C /* Extention */,
 				87E37FEE2BA080F900A4F809 /* ViewModel */,
 				87E37FEA2BA0787000A4F809 /* View */,
 				87E37FF52BA1950B00A4F809 /* PersistenceController.swift */,
@@ -155,6 +168,7 @@
 				87E37FE82B9F37AD00A4F809 /* HomeView.swift */,
 				87E37FF12BA09CBF00A4F809 /* SettingView.swift */,
 				87552FE62BA5826C009A7F1C /* TakenView.swift */,
+				87552FEC2BA5C454009A7F1C /* HistoryView.swift */,
 				87E37FF92BA1A10500A4F809 /* MedicineListView.swift */,
 				87552FE82BA588DE009A7F1C /* SelectMedicineView.swift */,
 			);
@@ -301,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87552FE52BA567D6009A7F1C /* AppDelegate.swift in Sources */,
+				87552FED2BA5C454009A7F1C /* HistoryView.swift in Sources */,
 				87E37FFA2BA1A10500A4F809 /* MedicineListView.swift in Sources */,
 				87E37FF02BA0811500A4F809 /* MedicineViewModel.swift in Sources */,
 				87E37FF22BA09CBF00A4F809 /* SettingView.swift in Sources */,
@@ -310,6 +325,7 @@
 				87E37FC62B9F36F200A4F809 /* MedicineNote.xcdatamodeld in Sources */,
 				87E37FBA2B9F36F100A4F809 /* MedicineNoteApp.swift in Sources */,
 				87552FE92BA588DE009A7F1C /* SelectMedicineView.swift in Sources */,
+				87552FF02BA5CC71009A7F1C /* Date.swift in Sources */,
 				87552FE72BA5826C009A7F1C /* TakenView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

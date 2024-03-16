@@ -15,10 +15,13 @@ class MedicationHistoryViewModel: ObservableObject {
     
     init(context: NSManagedObjectContext) {
         self.context = context
+        fetchMedicineHistory()
     }
     
     func fetchMedicineHistory() {
         let request: NSFetchRequest<MedicineHistory> = MedicineHistory.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: false)
+        request.sortDescriptors = [sortDescriptor]
         do {
             medicineHistoryData = try context.fetch(request)
         } catch {
@@ -38,6 +41,7 @@ class MedicationHistoryViewModel: ObservableObject {
         // コンテキストに変更を保存
         do {
             try context.save()
+            fetchMedicineHistory()
             print("Medication history successfully added.")
         } catch {
             print("Failed to save medication history: \(error)")

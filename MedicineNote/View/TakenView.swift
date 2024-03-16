@@ -10,6 +10,7 @@ import SwiftUI
 struct TakenView: View {
     
     @ObservedObject var viewModel: MedicineViewModel
+    @ObservedObject var historyViewModel: MedicationHistoryViewModel
     @State var selectedMedicine: [Medicine] = []
     @Binding var showingTakenSheet: Bool
     
@@ -57,8 +58,10 @@ extension TakenView {
                 .foregroundColor(Color(uiColor: .systemBackground))
         }
         .onTapGesture {
-            // TODO: 履歴データ保存処理を後々追加
-            showingTakenSheet = false
+            selectedMedicine.forEach { medicine in
+                historyViewModel.addMedicineHistory(name: medicine.name ?? "", dosage: medicine.dosage ?? "", date: Date())
+                showingTakenSheet = false
+            }
         }
     }
     
