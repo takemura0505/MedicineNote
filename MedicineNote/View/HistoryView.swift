@@ -15,14 +15,7 @@ struct HistoryView: View {
         VStack {
             HStack {
                 Spacer()
-                Button(action: {
-                    historyViewModel.deleteAllMedicationHistory()
-                }, label: {
-                    Text("全ての履歴を削除")
-                        .background(.clear)
-                        .foregroundColor(.red)
-                        .padding()
-                })
+                deleteButton
             }
             medicineHistoryView
         }
@@ -50,6 +43,17 @@ extension HistoryView {
         .onAppear {
             historyViewModel.fetchMedicineHistory()
         }
+    }
+    
+    private var deleteButton: some View {
+        Button(action: {
+            historyViewModel.deleteAllMedicationHistory()
+        }, label: {
+            Text("全ての履歴を削除")
+                .background(.clear)
+                .foregroundColor(.red)
+                .padding()
+        })
     }
     
 }

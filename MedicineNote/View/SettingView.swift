@@ -24,15 +24,6 @@ struct SettingView: View {
             dosage
             timeView
             addButtonView
-                .onTapGesture {
-                    if let medicine = medicine {
-                        viewModel.updateMedicine(id: medicine.id ?? "", newName: nameTextField, newDosage: dosageTextField, newTime: selectedTime)
-                        showingSettingSheet = false
-                    } else {
-                        viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, time: selectedTime)
-                        showingSettingSheet = false
-                    }
-                }
             if let medicine = medicine {
                 Button("削除") {
                     viewModel.deleteMedicine(id: medicine.id!)
@@ -43,11 +34,7 @@ struct SettingView: View {
             Spacer()
         }
         .onAppear {
-            if let medicine = medicine {
-                nameTextField = medicine.name ?? ""
-                dosageTextField = medicine.dosage ?? ""
-                selectedTime = medicine.time ?? Date()
-            }
+            setData()
         }
     }
 }
@@ -117,6 +104,27 @@ extension SettingView {
                 .foregroundColor(Color(uiColor: .label))
             Text("追加")
                 .foregroundColor(Color(uiColor: .systemBackground))
+        }
+        .onTapGesture {
+            updateData()
+        }
+    }
+    
+    private func updateData() {
+        if let medicine = medicine {
+            viewModel.updateMedicine(id: medicine.id ?? "", newName: nameTextField, newDosage: dosageTextField, newTime: selectedTime)
+            showingSettingSheet = false
+        } else {
+            viewModel.addMedicine(name: nameTextField, dosage: dosageTextField, time: selectedTime)
+            showingSettingSheet = false
+        }
+    }
+    
+    private func setData() {
+        if let medicine = medicine {
+            nameTextField = medicine.name ?? ""
+            dosageTextField = medicine.dosage ?? ""
+            selectedTime = medicine.time ?? Date()
         }
     }
     

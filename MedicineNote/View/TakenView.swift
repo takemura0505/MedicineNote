@@ -30,7 +30,7 @@ struct TakenView: View {
 
 extension TakenView {
     
-    var selectView: some View {
+    private var selectView: some View {
         ScrollView {
             Spacer(minLength: 40)
             ForEach(viewModel.medicineData, id: \.self) { medicine in
@@ -49,7 +49,7 @@ extension TakenView {
         }
     }
     
-    var takenButtonView: some View {
+    private var takenButtonView: some View {
         ZStack {
             Capsule()
                 .frame(width: 250, height: 50)
