@@ -15,28 +15,32 @@ struct SettingView: View {
     @ObservedObject var viewModel: MedicineViewModel
     @State private var nameTextField: String = ""
     @State private var dosageTextField: String = ""
+    @State private var keyboardHeight: CGFloat = 0
     let medicine: Medicine?
     
     var body: some View {
-        VStack(spacing: 20) {
-            Spacer()
-            nameView
-            dosage
-            timeView
-            addButtonView
-            if let medicine = medicine {
-                Button("削除") {
-                    viewModel.deleteMedicine(id: medicine.id!)
-                    showingSettingSheet = false
+        ScrollView {
+            VStack(spacing: 20) {
+                Spacer()
+                nameView
+                dosage
+                timeView
+                addButtonView
+                if let medicine = medicine {
+                    Button("削除") {
+                        viewModel.deleteMedicine(id: medicine.id!)
+                        showingSettingSheet = false
+                    }
+                    .foregroundColor(.red)
                 }
-                .foregroundColor(.red)
+                Spacer()
             }
-            Spacer()
-        }
-        .onAppear {
-            setData()
+            .onAppear {
+                setData()
+            }
         }
     }
+    
 }
 
 //#Preview {
